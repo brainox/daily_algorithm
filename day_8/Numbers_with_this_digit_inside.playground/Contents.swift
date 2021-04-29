@@ -20,71 +20,71 @@ import UIKit
  If there are no numbers, which include the digit, return [0,0,0].*/
 
 
-
-typealias Long = Int64
-
-func numbersWithDigitInside(_ x:Long, _ d: Long) -> [Long] {
-   
-    // the parameters to what I can understand
-    
-     let check = x
-
-    let secondNum = String(d)
-    var result = [String]()
-    
-    // check is x
-  
-    for i in (0...check) {
-        result.append(String(i))
-        
-    }
-  
-   if secondNum == "0" {
-        result.removeFirst()
-    }
-  
-    //count is d
-    var newArr = [Long]()
-    var count: Long = 0
-    for i in result {
-        if i.contains(secondNum) {
-            newArr.append(Long(i)!)
-            count += 1
-        }
-    }
-
-    var newestArr = [Long]()
-    for i in newArr {
-        if i == 0 {
-            continue
-        } else {
-            newestArr.append(i)
-        }
-    }
-    print(newestArr)
-    let multiplyResult: Long;
-    if newestArr == [] {
-        multiplyResult = newestArr.reduce(0, *)
-    } else {
-        multiplyResult = newestArr.reduce(1, *)
-    }
-
-    
-    
-    let addResult = newestArr.reduce(0, +)
-
-    let finalResult = [count, addResult, multiplyResult]
-
-//    print("The count of 1 is \(count)")
-//    print("The added result of 1 is \(addResult)")
-//    print("The multiplied result of 1 is \(multiplyResult)")
+//
+//typealias Long = Int64
+//
+//func numbersWithDigitInside(_ x:Long, _ d: Long) -> [Long] {
+//
+//    // the parameters to what I can understand
+//
+//     let check = x
+//
+//    let secondNum = String(d)
+//    var result = [String]()
+//
+//    // check is x
+//
+//    for i in (0...check) {
+//        result.append(String(i))
+//
+//    }
+//
+//   if secondNum == "0" {
+//        result.removeFirst()
+//    }
+//
+//    //count is d
+//    var newArr = [Long]()
+//    var count: Long = 0
+//    for i in result {
+//        if i.contains(secondNum) {
+//            newArr.append(Long(i)!)
+//            count += 1
+//        }
+//    }
+//
+//    var newestArr = [Long]()
+//    for i in newArr {
+//        if i == 0 {
+//            continue
+//        } else {
+//            newestArr.append(i)
+//        }
+//    }
+//    print(newestArr)
+//    let multiplyResult: Long;
+//    if newestArr == [] {
+//        multiplyResult = newestArr.reduce(0, *)
+//    } else {
+//        multiplyResult = newestArr.reduce(1, *)
+//    }
 //
 //
 //
-//    print(finalResult)
-    return finalResult
-    
-}
+//    let addResult = newestArr.reduce(0, +)
+//
+//    let finalResult = [count, addResult, multiplyResult]
+//
+////    print("The count of 1 is \(count)")
+////    print("The added result of 1 is \(addResult)")
+////    print("The multiplied result of 1 is \(multiplyResult)")
+////
+////
+////
+////    print(finalResult)
+//    return finalResult
+//
+//}
 
 
 
